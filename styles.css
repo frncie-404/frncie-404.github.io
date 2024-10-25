@@ -153,7 +153,7 @@ cursor: pointer;
 }
 @media(max-width: 600px){
     .container{
-        aspect-ratio: 16/14;
+        aspect-ratio: 24/22;
         width: 85%;
     grid-template-columns: 3fr;
     grid-template-areas: 
@@ -161,6 +161,11 @@ cursor: pointer;
         "head"
         "image"
         "main";
+}
+    
+#myworks > div {
+    transform-origin: 0 0;
+    transform: scale(0.8);
 }
 
 .francie{
