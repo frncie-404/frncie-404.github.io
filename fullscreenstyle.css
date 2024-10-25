@@ -128,9 +128,10 @@ cursor: pointer;
 }
 
 .bestwork{
-    height: 10rem;
+    height: 7rem;
 }
 .bestwork > img{
+    object-position: 50% 25%;
     overflow: hidden;
     visibility: hidden;
 }
