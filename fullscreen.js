@@ -16,7 +16,7 @@ const myworks = document.getElementById("myworks");
 const socmed = document.getElementById("socmed");
 
 function visit() {
-  window.location = "index.html";
+  window.location = "./";
 }
 
 home.addEventListener("click", (event) => {
