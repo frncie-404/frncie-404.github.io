@@ -1,0 +1,20 @@
+.card-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(0, 0, 33, 0.4);
+}
+img{
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+    
+.card:hover .card-overlay {
+    opacity: 1;
+  }
+
+.card.text-white{
+    width: 17rem;
+}
