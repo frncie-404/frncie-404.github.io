@@ -1,13 +1,7 @@
-
-@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
+@font-face {
+    font-family: 'Windows 98';
+    src: url('https://file.garden/ZYwGFY8EZxs65XRq/windows%2098.ttf');
+    font-size: 6pt;
 }
 h1{
     font-size:32pt;
