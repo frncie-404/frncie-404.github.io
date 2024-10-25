@@ -1,11 +1,12 @@
 @font-face {
     font-family: 'Windows 98';
-    src: url('../font/ms-sans-serif-1.ttf') format('truetype');
-    font-size: 6pt;
+    src: url('https://file.garden/ZYwGFY8EZxs65XRq/windows%2098.ttf');
+    font-size: 20pt;
 }
 .container{
-    aspect-ratio: 5/2;
+    aspect-ratio: 4/1;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 16pt;
     padding: 0;
     margin: 0;
     border-width: .3rem;
@@ -131,8 +132,8 @@ cursor: pointer;
     height: 7rem;
 }
 .bestwork > img{
-    object-position: 50% 25%;
     overflow: hidden;
+    object-position: 50% 25%;
     visibility: hidden;
 }
 #text{
