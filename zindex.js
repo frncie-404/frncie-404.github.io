@@ -18,7 +18,7 @@ const myworks = document.getElementById("myworks");
 const socmed = document.getElementById("socmed");
 
 function visit() {
-  window.location = "fullscreen";
+  window.location = "./fullscreen";
 }
 
 ie.addEventListener("click", (event) => {
