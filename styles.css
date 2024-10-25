@@ -151,7 +151,7 @@ cursor: pointer;
     padding-inline: 0.5rem;
     grid-area: main;
 }
-@media(max-width: 600px){
+@media(max-width: 320px){
     .container{
         width: 85%;
     grid-template-columns: 3fr;
