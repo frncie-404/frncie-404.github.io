@@ -37,7 +37,7 @@ body {
     overflow: auto;
 }
 .container{
-    aspect-ratio: 4/2;
+    aspect-ratio: 4/1;
     border-width: .3rem;
     border-style:solid;
     border-color: #818181;
@@ -153,6 +153,7 @@ cursor: pointer;
 }
 @media(max-width: 600px){
     .container{
+        aspect-ratio: 16/14;
         width: 85%;
     grid-template-columns: 3fr;
     grid-template-areas: 
@@ -163,7 +164,7 @@ cursor: pointer;
 }
 
 .francie{
-    height: 10rem;
+    height: 7rem;
     img{
         overflow: hidden;
         visibility: hidden;
