@@ -171,6 +171,7 @@ cursor: pointer;
 .francie{
     height: 7rem;
     img{
+    object-position: 50% 25%;
         overflow: hidden;
         visibility: hidden;
     }
