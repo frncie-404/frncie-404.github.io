@@ -1,12 +1,11 @@
 @font-face {
     font-family: 'Windows 98';
     src: url('https://file.garden/ZYwGFY8EZxs65XRq/windows%2098.ttf');
-    font-size: 16pt;
+    font-size: 6pt;
 }
 .container{
     aspect-ratio: 4/1;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20pt;
     padding: 0;
     margin: 0;
     border-width: .3rem;
@@ -24,16 +23,14 @@
 }
 .header{
     padding: 0.5rem;
-    font-size: 22pt;
     grid-area: header;
     background-color: #010081;
     color:#fdffff;
     font-family: 'Windows 98';
     input{
         vertical-align: middle;
-        transform: scale(2);
         float: right;
-        margin-inline: .7rem;
+        margin-left: .2rem;
     }
 }
 .bestwork{
@@ -68,9 +65,6 @@
             margin-right: 1rem;
         }
     }
-}
-button{
-    font-size: 16pt;
 }
 #text{
     background-color: #fdffff;
@@ -132,9 +126,7 @@ cursor: pointer;
         "image"
         "main";
 }
-button{
-    font-size: 12pt;
-}
+
 .bestwork{
     height: 7rem;
 }
