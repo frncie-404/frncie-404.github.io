@@ -10,11 +10,33 @@ img{
     aspect-ratio: 3/4;
     object-fit: cover;
 }
+.nav-link{
+    color: #ededed;
+}
+.nav-link:hover{
+    color: #FF00A7;
+}
+:root {
+    --bs-body-bg: ;
+}
+body{
+    background-color: #090614;
+    color: #EDEDED;
+}
     
 .card:hover .card-overlay {
     opacity: 1;
   }
 
-.card.text-white{
-    width: 17rem;
+.card:hover{
+    transform: scale(1.07);
+}
+.card{
+    transition:transform, .5s;
+}
+@media(max-width: 600px){
+    .card{
+        width: 75%;
+        margin-left: 4rem;
+    }
 }
