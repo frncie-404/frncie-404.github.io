@@ -7,57 +7,126 @@
 	<title>Francie's Commissions</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="commission.css"/>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="commission.css" />
 </head>
 
-<body>
-	<nav class="navbar sticky-top navbar-dark" style="background-color: #150038;">
+<body data-bs-spy="scroll" data-bs-target="scrollable" id="home">
+	<nav id="scrollable" class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: #150038;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="https://file.garden/ZYwGFY8EZxs65XRq/bow" width="50" height="50" class="d-inline-block align-text-center">
-      Francie's!</a>
-		<ul class="nav">
-			<li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" href="#guidelines">Guidelines</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#samples">Examples</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="https://forms.gle/Y45mnmXD5aootVeu8">Commission Sheet</a>
-			</li>
-		</ul>
-	</div>
+			<a class="navbar-brand" href="#"><img src="https://file.garden/ZYwGFY8EZxs65XRq/bow" width="50" height="50" class="d-inline-block align-text-center"> Francie's!</a>
+			<button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse justify-content-end offcanvas-collapse" id="navbarsExampleDefault">
+				<ul class="nav navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#guidelines">TOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#options">Examples</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://forms.gle/Y45mnmXD5aootVeu8">Commission Form</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</nav>
-    <br>
-    <div class="container" id="#">
-        <h1>Francie's Commission Page</h1>
+	<br>
+	<div class="container">
+		<h1>Francie's Commission Page</h1>
 		<hr>
-        <p>
-			Before you make a commission request please take a look at my guidelines, rules, 
-			and my sample art and prices to get yourself acquainted with what I will and won't do.
-        </p>
-		<br>
-		<br>
-    </div>
-    <hr> 
+		<div class="row">
+			<div class="col">
+				<br><br>
+				<br>
+				<p>
+				<h3>Francie</h3>
+				<h5>20 year old Filipino.</h5>
+				<h6>Full-time IT student, part-time Artist.</h6><br> Before you make a commission request please take a look at my guidelines, what I will and will not draw, and my sample art and prices to get yourself acquainted with what I will and won't do. </p>
+			</div>
+			<div class="col">
+				<img src="https://file.garden/ZYwGFY8EZxs65XRq/bust.svg" width="500" height="480">
+			</div>
+		</div>
+	</div>
+	<hr>
 	<div class="container" id="guidelines">
-		<h1>Guidelines</h1>
+		<h1>Terms of Service</h1>
 		<hr>
 		<p>
-
+		<ul class="guidelines a">
+			<li><span><strong>Please fill out my commission sheet to make a request.</strong> I will not be accepting requests through DMs or emails.</span></li>
+			<br>
+			<li><span>All prices are in <strong>USD</strong>.</span></li>
+			<br>
+			<li><span><strong>All commission work is for personal use only.</strong> If you intend to post it on any platform do not remove my signature and be sure to give credit.</span></li>
+		</ul>
+		<br>
+		<br>
+		<ul class="guidelines b">
+			<li><span><strong>No refunds once I start working on your commission.</strong> If you think there's a possibility that you might need that money for something else please do not continue with your request.</span></li>
+			<br>
+			<li><span><strong>I have a right to refuse potentially disturbing commission requests.</strong> There may be something you want drawn that isn't explicitly stated under the "I will not draw" section. However, I will still turn down any form of problematic or uncomfortable requests.</span></li>
+			<br>
+			<li><span><strong>Send me all the necessary references.</strong> Poses, clothing, weapons, etc., I will accept a picrew or a photobash of your character or content of commission if available. Minecraft and Roblox references are accepted however it may require multiple screenings of the sketch.</span></li>
+			<br>
+			<li><span><strong>50% downpayment should be paid.</strong> Once I send you a sketch that you are satisfied with. If you're unable to comply then I will cancel your commission after 3 days.</span></li>
+		</ul>
+		<br>
+		<br>
+		<div class="container">
+			<div class="row text-center">
+				<div class="col">
+					<h5>I will draw:</h5>
+				</div>
+				<div class="col">
+					<h5>I will not draw:</h5>
+				</div>
+			</div>
+			<div class="row align-items-start">
+				<div class="col">
+					<ul class="will-draw">
+						<li><span>Canon Character/Fanart</span></li>
+						<br>
+						<li><span>Original Characters</span></li>
+						<br>
+						<li><span>Fandom <abbr title="Original Characters">OCs</abbr></span></li>
+						<br>
+						<li><span>Suggestive art</span></li>
+						<br>
+						<li><span><strong>Gore.</strong> I am still learning however, and it may not be to the best of my abilities.</span></li>
+					</ul>
+				</div>
+				<div class="col">
+					<ul class="wont-draw">
+						<li><span>Explicit/Highly NSFW illustrations.</span></li>
+						<br>
+						<li><span><strong>Photorealistic, Hyperrealistic,</strong> or any similar illustrations.</span></li>
+						<br>
+						<li><span><strong>Furries, Mechas, etc.</strong> depending on the difficulty</span></li>
+						<br>
+						<li><span>Problematic Art</span></li>
+						<br>
+						<li><span><strong>Political Propaganda.</strong> Even if I support the political party and make political art on my own accord I will not be taking pollitical commissions.</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		</p>
 		<br>
 		<br>
 	</div>
 	<hr>
 	<div class="container" id="options">
-        <h1>Options</h1>
-        <hr>
+		<h1>Options</h1>
+		<hr>
 		<p> Hover over the cards to see pricing and options!</p>
-		<div class="row">
+		<div class="row align-items-center">
 			<div class="col-sm-4 gy-5">
 				<div class="card text-white h-100">
 					<img src="https://file.garden/ZYwGFY8EZxs65XRq/junarie.png" class="card-img-top" alt="bust">
@@ -92,13 +161,36 @@
 				</div>
 			</div>
 		</div>
-        <br>
+		<br>
+		<div class="container">
+			<h5>Want extra characters? A more complex background?</h5>
+			<p> Feel free to contact me to discuss the pricing! </p>
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<button>.<img src="https://file.garden/ZYwGFY8EZxs65XRq/Discord.svg" width="23rem" height="18rem"><span> Discord: @weeping.ribs</span>..</button>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<button>.<img src="https://file.garden/ZYwGFY8EZxs65XRq/Bluesky.svg" width="18rem" height="18rem"><span> Bluesky: @weepingribs.bsky.social</span>..</button>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<button>.<img src="https://file.garden/ZYwGFY8EZxs65XRq/Instagram.svg" width="18rem" height="18rem"><span> Instagram: @weeping.ribs</span>..</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 col-md-offset-2 col-sm-12">
+					<button>.<img src="https://file.garden/ZYwGFY8EZxs65XRq/Tumblr.svg" width="18rem" height="18rem"><span> Tumblr: weeping-ribs</span>..</button>
+				</div>
+				<div class="col-md-5 col-sm-12">
+					<button>.<img src="https://file.garden/ZYwGFY8EZxs65XRq/Toyhouse.svg" width="18rem" height="18rem"><span> Toyhouse: @scalloped_dove</span>..</button>
+				</div>
+			</div>
+			<p> Once you've settled with an option and have read my guidelines, please proceed to my Commission Form if you wish to commission me! </p>
+		</div>
 	</div>
 	<br>
 	<br>
-    <hr>
+	<hr>
 	<br>
-
 	<script src="extra-bs.js"></script>
 </body>
 
