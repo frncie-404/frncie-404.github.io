@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        marquee: 'marquee 40s linear infinite',
+                        'blob-slow': 'blob 28s infinite ease-in-out',
+                        'blob-slower': 'blob 38s infinite ease-in-out',
+                    },
+                    keyframes: {
+                        marquee: {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50.11%)' },
+                        },
+                        blob: {
+                            '0%, 100%': {
+                                transform: 'translate(0px, 0px) scale(1)',
+                            },
+                            '33%': {
+                                transform: 'translate(20px, -30px) scale(1.05)',
+                            },
+                            '66%': {
+                                transform: 'translate(-25px, 20px) scale(0.95)',
+                            },
+                        },
+                    },
+                    colors: {
+                        base: {
+                            bg: '#0b1020',        
+                            surface: '#11172b',   
+                            surface2: '#161d3a',  
+                            border: '#1f2a4d',    
+                        },
+                        text: {
+                            primary: '#e6e9f2',   
+                            secondary: '#aab1d1', 
+                            subtle: '#7b83b6',    
+                            purple: '#9b6bff'
+                        },
+                        accent: {
+                            blue: '#5b7cfa',
+                            purple: '#9b6bff',
+                        }
+                    }
+                }
+            }
+
+        }
+
+    </script>
+</head>
+
+<body class="bg-base-bg text-text-primary min-h-screen">
+    <div id="cursor-glow"></div>
+    <nav class="bg-base-surface border-b border-base-border shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="leading-tight">
+                <div class="text-xl font-bold text-text-primary">
+                    Francie
+                </div>
+                <div class="text-sm text-text-subtle">
+                    by A. Delos Santos
+                </div>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#" data-section="home"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">Home</a>
+                <a href="#" data-section="video"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">Video</a>
+                <a href="#" data-section="design"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">Graphic
+                    Design</a>
+                <a href="#" data-section="tech"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">Tech</a>
+                <a href="#" data-section="about"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">About</a>
+                <a href="#" data-section="contact"
+                    class="nav-link text-text-secondary hover:text-accent-purple transition">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-text-secondary focus:outline-none">
+                ☰
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-3">
+            <a href="#" data-section="home" class="block nav-link text-text-secondary">Home</a>
+            <a href="#" data-section="video" class="block nav-link text-text-secondary">Video</a>
+            <a href="#" data-section="design" class="block nav-link text-text-secondary">Graphic Design</a>
+            <a href="#" data-section="tech" class="block nav-link text-text-secondary">Tech</a>
+            <a href="#" data-section="about" class="block nav-link text-text-secondary">About</a>
+            <a href="#" data-section="contact" class="block nav-link text-text-secondary">Contact</a>
+        </div>
+    </nav>
+    <section id="home" class="section max-w-7xl mx-auto px-6 py-24 transition-all duration-500 ease-out opacity-100 translate-y-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold text-text-primary">
+                    Francie <br />
+                    <span id="typing" class="text-3xl md:text-5xl text-accent-purple"></span><span
+                        class="inline-block w-1 h-15 bg-accent-purple ml-1 align-middle opacity-70"></span>
+                </h1>
+
+                <p class="mt-6 text-lg text-text-subtle max-w-xl">
+                    BSIT student with a passion for video editing and graphic design, aiming to build a career in the
+                    creative industry while expanding my tech skillset.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#" data-section="video"
+                        class="nav-link px-6 py-3 bg-accent-purple text-base-surface rounded-lg hover:lg-blue-700 transition">
+                        Video
+                    </a>
+                    <a href="#" data-section="design"
+                        class="nav-link px-6 py-3 border border-base-border rounded-lg hover:border-accent-purple hover:text-accent-purple transition">
+                        Graphic Design
+                    </a>
+                    <a href="#" data-section="tech"
+                        class="nav-link px-6 py-3 border border-base-border rounded-lg hover:border-accent-purple hover:text-accent-purple transition">
+                        Tech
+                    </a>
+                    <a href="#" data-section="contact"
+                        class="nav-link px-6 py-3 border border-base-border rounded-lg hover:border-accent-purple hover:text-accent-purple transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex items-center justify-center">
+                <div
+                    class="absolute w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-accent-blue via-accent-purple to-pink-900 rounded-full blur-3xl opacity-50 -top-10 -left-10 animate-blob-slower">
+                </div>
+                <img src="/assets/img/Delos Santos.png" alt="DelosSantos.png"
+                    class="relative z-10 w-60 md:w-96 object-contain">
+                <div
+                    class="absolute w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-pink-900 via-accent-purple to-accent-blue rounded-full blur-2xl opacity-50 bottom-0 right-0 animate-blob-slow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="section hidden max-w-7xl mx-auto px-6 py-24 transition-all duration-500 ease-out opacity-0 translate-y-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-10">
+            Video Works
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
+            <div class="lg:col-span-3">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-video">
+                    <iframe src="https://www.youtube.com/embed/_A75USDf1pw" frameborder="0"
+                        class="absolute inset-0 w-full h-full" title="Featured Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="lg:col-span-2 flex flex-col justify-center">
+                <h4 class="text-4xl font-semibold mb-3">Featured Work</h4>
+                <h3 class="text-2xl font-semibold mb-2">
+                    SILENCE
+                </h3>
+                <p class="text-sm text-text-subtle mb-4">
+                    Using DaVinci Resolve
+                </p>
+                <div class="text-text-subtle leading-relaxed">
+                    SILENCE is a short horror film centered on grief, denial, and hidden resentment following the
+                    apparent suicide of a close friend. As her friends search for answers, their guilt and unresolved
+                    conflicts begin to surface.
+                    <br />
+                    I served as <strong>Director and Editor</strong>, shaping the narrative and tension through pacing,
+                    reveal structure, color grading, effects, and controlled visual storytelling to gradually shift the
+                    film from mystery to horror.
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/ngDXn3ros6k" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/InfoSec.png" alt="InfoSec Part 001" class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">Social Media Awareness Campaign</h4>
+                    <p class="text-sm text-text-subtle mb-4">Editor | DaVinci Resolve & Premiere Pro</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/_X8A0KDU6aU" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/Pamana Poster (1).png" alt="Pamana Trailer" class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">Pamana Trailer</h4>
+                    <p class="text-sm text-text-subtle mb-4">Director & Editor | Premiere Pro</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/nMzX1zYNuAE" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/Pamana Poster (1).png" alt="Pamana Short Film"
+                        class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">Pamana Short Film</h4>
+                    <p class="text-sm text-text-subtle mb-4">Director & Editor | Premiere Pro</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/zbytPaEbaPE" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/VulcanIQ Company Reveal.jpg" alt="InfoSec Part 001"
+                        class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">VulcanIQ Company Reveal</h4>
+                    <p class="text-sm text-text-subtle mb-4">Editor | Premiere Pro & After Effects</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/ogB-pdSw_ao" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/VulcanIQ Company Reveal.jpg" alt="InfoSec Part 001"
+                        class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">VulcanIQ IoT Prototype</h4>
+                    <p class="text-sm text-text-subtle mb-4">Animator | Blender</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/gJsJmtZGHnw" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/VulcanIQ Company Reveal.jpg" alt="InfoSec Part 001"
+                        class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">VulcanIQ App Prototype</h4>
+                    <p class="text-sm text-text-subtle mb-4">Animator | Blender</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 rounded-xl overflow-hidden shadow transition-transform duration-300 hover:-translate-y-1">
+                <a href="https://youtu.be/bo-LYo1tgkg" target="_blank"
+                    class="group relative rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <img src="assets/img/Candlelit Evening Thumbnail.png" alt="InfoSec Part 001"
+                        class="w-full h-40 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="text-base-surface text-3xl">▶</span>
+                    </div>
+                </a>
+                <div class="p-3">
+                    <h4 class="font-medium text-sm">Candlelit Evening Trailer</h4>
+                    <p class="text-sm text-text-subtle mb-4">Producer & Editor | Premiere Pro</p>
+                </div>
+            </div>
+            <div
+                class="bg-base-surface2 h-60 rounded-xl overflow-hidden shadow flex items-center justify-center text-center">
+                <h4 class="text-4xl font-medium">More Works Coming Soon</h4>
+            </div>
+        </div>
+
+    </section>
+    <section id="design" class="section hidden relative pb-24 transition-all duration-500 ease-out opacity-0 translate-y-4">
+        <div class="relative py-32">
+            <div class="absolute inset-0 flex items-center pointer-events-none">
+                <div class="w-full overflow-hidden
+            [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+
+                    <div class="flex w-max gap-1 animate-marquee opacity-65">
+
+                        <img src="assets/img/carousel/rec poster full.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/VulcanIQ Logo and Name.jpg" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/Magazine B.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/Sign Up - Femas.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/sandra - alt.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/The Avengers MVP.png" class="h-72 shrink-0" alt="">
+
+                        <img src="assets/img/carousel/rec poster full.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/VulcanIQ Logo and Name.jpg" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/Magazine B.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/Sign Up - Femas.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/sandra - alt.png" class="h-72 shrink-0" alt="">
+                        <img src="assets/img/carousel/The Avengers MVP.png" class="h-72 shrink-0" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 text-center">
+                <h2
+                    class="text-text-primary text-6xl md:text-8xl font-extrabold tracking-tight [text-shadow:0_4px_12px_rgba(0,0,0,0.50)]">
+                    Graphic Design Works
+                </h2>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 pt-16">
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+                <a href="https://drive.google.com/drive/folders/1RmgyvC04zfuGk5gsGdjSvGqek9-KYHvo"
+                    class="md:col-span-2 md:aspect-[6/5] group relative rounded-2xl border border-base-border overflow-hidden shadow">
+                    <img src="assets/img/carousel/Magazine B.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        alt="Academic & Institutional Visuals">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">Academic & Institutional Visuals</h3>
+                        <p class="text-sm text-text-primary opacity-90">Various</p>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1GuhG_9mtaiko_34_UHu96qN5CC9HIiAF"
+                    class="md:col-span-4 md:row-span-2 md:aspect-[7/5] group relative rounded-2xl border border-base-border overflow-hidden shadow-lg">
+                    <img src="assets/img/carousel/Sign Up - Femas.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] duration-500"
+                        alt="Femas Gym">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">Femas Gym</h3>
+                        <p class="text-sm text-text-primary opacity-90">UI Design | Branding</p>
+                        <p class="text-sm text-text-primary opacity-85 italic">Figma, Illustrator</p>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/drive/folders/18VaJmH4UOGcKVnxeUmyiKIQMVH2JWIrF"
+                    class="md:col-span-2 md:row-span-2 md:aspect-[5/7] group relative rounded-2xl border border-base-border overflow-hidden shadow-lg">
+                    <img src="assets/img/carousel/sandra - alt.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        alt="CCS Student Body">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">CCS Student Body</h3>
+                        <p class="text-sm text-text-primary opacity-90">Graphic Design | Publication Materials</p>
+                        <p class="text-sm text-text-primary opacity-85 italic">Photoshop | Canva</p>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1o0XcrJF_D9TVJTqrn2Tfrhl0Ndi447Bo"
+                    class="md:col-span-2 md:aspect-[8/6] group relative rounded-2xl border border-base-border overflow-hidden shadow-lg">
+                    <img src="assets/img/carousel/VulcanIQ Logo and Name.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        alt="VulcanIQ StartUp">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">VulcanIQ StartUp</h3>
+                        <p class="text-sm text-text-primary opacity-90">UI Design | Branding | Prototype Design</p>
+                        <p class="text-sm text-text-primary opacity-85 italic">Figma, Illustrator, Blender</p>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1njIpfojkWZ4XNE5pgmDr17o6jSI7Ghka"
+                    class="md:col-span-1 md:aspect-[13/21] group relative rounded-2xl border border-base-border overflow-hidden shadow-lg">
+                    <img src="assets/img/carousel/rec poster full.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        alt="REC">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">REC</h3>
+                        <p class="text-sm text-text-primary opacity-90">Poster | Prop Design</p>
+                        <p class="text-sm text-text-primary italic opacity-85">Illustrator</p>
+                    </div>
+                </a>
+                <a href="#"
+                    class="md:col-span-1 md:aspect-[13/21] group relative rounded-2xl border border-base-border overflow-hidden shadow-lg">
+                    <img src="assets/img/carousel/The Avengers MVP.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        alt="Additional Selected Works">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100"></div>
+                    <div class="absolute bottom-4 left-4 text-base-surface opacity-0 group-hover:opacity-100">
+                        <h3 class="text-lg text-text-primary font-semibold">Additional Selected Works</h3>
+                        <p class="text-sm text-text-primary opacity-90">Various</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="tech" class="section hidden max-w-7xl mx-auto px-6 py-24 transition-all duration-500 ease-out opacity-0 translate-y-4">
+        <div class="text-center">
+            <h2 class="text-6xl md:text-8xl font-bold tracking-tight">
+                Coming Soon...
+            </h2>
+            <h3 class="pt-6 md:text-2xl tracking-tight">
+                Selected projects will be added as development progresses.
+            </h3>
+        </div>
+    </section>
+    <section id="about" class="section hidden max-w-7xl mx-auto px-6 py-24 transition-all duration-500 ease-out opacity-0 translate-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                    About Me
+                </h2>
+
+                <p class="text-lg text-text-secondary leading-relaxed mb-4">
+                    I go by <strong>Francie</strong> online; a name I use across
+                    my creative and technical work. Francie serves as a brand for my
+                    technology related explorations, while this portfolio represents my broader creative practice.
+                </p>
+
+                <p class="text-lg text-text-secondary leading-relaxed mb-4">
+                    My real name is <strong>Alessandra Delos Santos</strong>, I'm a BSIT student with
+                    a stronger pull towards creative work; particularly video editing, graphic design and
+                    visual storytelling.
+                </p>
+
+                <p class="text-lg text-text-secondary leading-relaxed mb-6">
+                    Alongside my creative work, I also explore IT-related projects such as web development
+                    and game development. While these aren't my main focus, they help shape my understanding of
+                    structure, systems, and interaction, which benefits my creative process.
+                </p>
+
+                <p class="text-text-subtle leading-relaxed">
+                    I’m currently seeking opportunities in the creative
+                    industry, applying for video and creative roles, while continuing
+                    to grow my technical experience through personal and academic projects.
+                    I'm open to opportunities where creativity is valued and where there is
+                    room to grow across disciplines.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+
+                <div class="rounded-2xl bg-base-surface shadow-md p-6">
+                    <h3 class="font-semibold text-lg mb-2">Video Editing</h3>
+                    <p class="text-text-subtle">
+                        I prioritize clarity first, making sure the story is understood before
+                        anything else. From there, I shape emotion and atmosphere, using pacing
+                        and rhythm to support the narrative. While my work leans toward structured
+                        storytelling, I occasionally explore experimental ideas when they serve the piece;
+                        keeping what works and discarding what doesn't.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl bg-base-surface shadow-md p-6">
+                    <h3 class="font-semibold text-lg mb-2">Graphic Design</h3>
+                    <p class="text-text-subtle">
+                        I think visually first, but I design best when a concept leads the visuals.
+                        My comfort space is bold, reduced, compositions; as shown best in my personal works,
+                        but I'm actively refining my process to ensure every visual decision is grounded
+                        in intent.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl bg-base-surface shadow-md p-6">
+                    <h3 class="font-semibold text-lg mb-2">Creative Tech</h3>
+                    <p class="text-text-subtle">
+                        I keep technology in my skill set to expand the range of creative opportunities.
+                        I don't treat tech as separate from creativity; I view it as a way to build,
+                        control, and extend ideas beyond traditional mediums.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section hidden max-w-7xl mx-auto px-6 py-24 transition-all duration-500 ease-out opacity-0 translate-y-4">
+        <div class="max-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+                Contact
+            </h2>
+            <h3 class="text-xl md:text-2xl font-medium text-text-secondary mb-10">
+                Let's work on something meaningful.
+            </h3>
+            <p class="text-text-subtle max-w-2xl mb-12">
+                I'm currently open to creative opportunities, especially in
+                video editing and design, while I continue to improve my
+                technical skills. If you think my work matches what you're
+                creating, feel free to contact me.
+            </p>
+            <div class="grid gap-6 md:grid-cols-2 mb-4">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alessandradelos.santos.r@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Francie,%0D%0A%0D%0A"
+                    target="_blank" rel="noopener"
+                    class="p-6 rounded-xl border border-base-border hover:bg-accent-purple transition">
+                    <p class="text-sm text-text-subtle mb-1">
+                        Email
+                    </p>
+                    <p class="text-lg font-medium">
+                        alessandradelos.santos.r@gmail.com
+                    </p>
+                </a>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2 mb-4">
+                <a href="https://www.youtube.com/@weeping-ribs"
+                    class="p-6 rounded-xl border border-base-border hover:bg-accent-purple transition">
+                    <p class="text-sm text-text-subtle mb-1">
+                        Video Works
+                    </p>
+                    <p class="text-lg font-medium">
+                        Francie404
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="assets/js/main.js"></script>
+    <style>
+        #cursor-glow {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(60rem at var(--x, 50%) var(--y, 50%),
+                    rgba(168, 85, 247, 0.12),
+                    transparent 55%);
+            transition: background-position 0.15s ease-out;
+            z-index: 0;
+        }
+    </style>
+</body>
+
+</html>
